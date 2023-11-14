@@ -1,7 +1,9 @@
 use hyper;
 use hyper::http;
-use random_http_1::{build_client, build_req, process_req, ReqError};
 use tokio;
+
+use random_http_1::core::client::{build_client, build_req, process_req};
+use random_http_1::core::error::ReqError;
 
 #[tokio::main]
 async fn main() -> Result<(), ReqError> {
